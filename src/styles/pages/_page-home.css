@@ -1,4 +1,4 @@
-/* Page - Home */
+/* Page - Home*/
 .page--home {
   & .page-content {
     display: flex;
@@ -6,28 +6,5 @@
     align-content: center;
     justify-content: center;
     text-align: center;
-  }
-
-  & h1 {
-    font-size: calc(20.57143px + 3.57143vw);
-    font-weight: 900;
-    letter-spacing: .02em;
-    word-wrap: break-word;
-  }
-
-  & p {
-    font-size: calc(19.42857px + .17857vw);
-    line-height: calc(25.88235px + .98039vw);
-  }
-
-  & p a {
-    text-decoration-color: var(--color-brand);
-    color: #111;
-    transition: all var(--tran-timing) var(--tran-duration);
-
-    &:hover {
-      color: #111;
-      text-decoration-color: #111;
-    }
   }
 }
