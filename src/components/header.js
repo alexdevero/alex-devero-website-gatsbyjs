@@ -2,10 +2,14 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const Header = () => (
-  <header className="header" style={{ display: 'none' }}>
+  <header className="header">
     <nav className="nav-main">
       <ul>
         <li>
+          <Link to="/">Home</Link>
+        </li>
+
+        <li style={{ display: 'none' }}>
           <Link to="/projects/">Projects</Link>
         </li>
 
@@ -17,7 +21,7 @@ const Header = () => (
           <Link to="/about/">About</Link>
         </li>
 
-        <li>
+        <li style={{ display: 'none' }}>
           <Link to="/contact/">Contact</Link>
         </li>
       </ul>

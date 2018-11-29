@@ -55,7 +55,7 @@ const Footer = () => (
     </nav>
 
     <small className="footer__copy">
-      Copyright &copy; <time datetime="Tue Nov 27 2018 11:23:31 GMT+0100 (Středoevropský standardní čas)">2018</time> Alex Devero
+      Copyright &copy; <time dateTime="Tue Nov 27 2018 11:23:31 GMT+0100 (Středoevropský standardní čas)">2018</time> Alex Devero
     </small>
   </footer>
 )
