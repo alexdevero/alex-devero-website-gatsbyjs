@@ -9,7 +9,7 @@ const Header = () => (
           <Link to="/">Home</Link>
         </li>
 
-        <li style={{ display: 'none' }}>
+        <li>
           <Link to="/projects/">Projects</Link>
         </li>
 
