@@ -1,0 +1,35 @@
+/* Page - Projects */
+@media (max-width: 991px) and (min-width: 768px) {
+  .page--projects [class*='col-']:nth-of-type(n + 3) {
+    margin-top: 32px;
+  }
+}
+
+@media (min-width: 991px) {
+  .page--projects [class*='col-']:nth-of-type(n + 4) {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page--projects [class*='col-']:nth-of-type(n + 2) {
+    margin-top: 32px;
+  }
+}
+
+.project__container {
+  text-decoration: none;
+  color: var(--color-black);
+
+  &:hover {
+    color: var(--color-brand);
+  }
+}
+
+.project__body {
+  font-weight: 700;
+}
+
+.project__number {
+  font-size: responsive 18px 21px;
+}
