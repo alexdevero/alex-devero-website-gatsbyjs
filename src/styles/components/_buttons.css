@@ -24,18 +24,30 @@
     /* transform: translateY(-10px); */
   }
 
-  /* &:hover::before {
-    bottom: -12px;
-  } */
-
-  &::before {
+  &::before,
+  &::after {
     position: absolute;
-    bottom: -8px;
-    right: -8px;
-    z-index: 1;
     width: 100%;
     height: 100%;
     content: '';
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: var(--color-black);
+    transition: background-color var(--tran-duration) var(--tran-timing);
+  }
+
+  &:hover::before {
+    background-color: var(--color-brand);
+  }
+
+  &::after {
+    bottom: -8px;
+    right: -8px;
+    z-index: -2;
     background-color: hsla(0, 0%, 80%, .5);
     transition: bottom var(--tran-duration) var(--tran-timing);
   }
