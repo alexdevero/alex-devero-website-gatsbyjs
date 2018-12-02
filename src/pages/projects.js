@@ -8,12 +8,18 @@ const ProjectsPage = () => (
       <h1>Projects</h1>
     </div>
 
-    <div className="container">
-      <p>
-        Welcome to my personal laboratory. These are some of my recent experiments. You can find the code for most of them is on my <a href="https://github.com/alexdevero">GitHub</a>.
-      </p>
+    <div className="projects__header container">
+      <div className="row justify-content-center">
+        <div className="col-lg-8">
+          <p>
+            Welcome to my personal laboratory. These are some of my experiments. Code for most of them is on my <a href="https://github.com/alexdevero">GitHub</a>.
+          </p>
 
-      <div className="row">
+          <h2 className="projects__wip">Work in progress</h2>
+        </div>
+      </div>
+
+      <div className="projects__dashboard row">
         <div className="col-md-6 col-lg-4">
           <a className="project__container" href="#">
             <div className="project__header">
