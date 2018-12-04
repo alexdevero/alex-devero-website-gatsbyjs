@@ -56,7 +56,7 @@ textarea {
   & + span::before {
     position: absolute;
     top: -1px;
-    left: -26px;
+    left: -23px;
     content: '';
     display: inline-block;
     vertical-align: text-top;
