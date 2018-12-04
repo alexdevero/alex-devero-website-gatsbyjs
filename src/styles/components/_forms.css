@@ -82,7 +82,7 @@ textarea {
   &:checked + span::after {
     position: absolute;
     top: 7px;
-    left: -22px;
+    left: -19px;
     content: '';
     background: #fff;
     width: 2px;
