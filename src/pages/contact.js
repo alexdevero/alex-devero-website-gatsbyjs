@@ -48,44 +48,49 @@ class ContactPage extends React.Component {
         isFormValid: true
       })
 
-      // $.ajax({
-      //   data: this.state,
-      //   type: 'POST',
-      //   url: withPrefix('/contact.php'),
-      //   success: function(data) {
-      //     console.info(data)
-      //   },
-      //   error: function(xhr, status, err) {
-      //     console.error(status, err.toString())
-      //   }
-      // })
+      setTimeout(() => {
+        // $.ajax({
+        //   data: this.state,
+        //   type: 'POST',
+        //   url: withPrefix('/contact.php'),
+        //   success: function(data) {
+        //     console.info(data)
+        //   },
+        //   error: function(xhr, status, err) {
+        //     console.error(status, err.toString())
+        //   }
+        // })
 
-      const callback = function() {
-        console.info(this)
-      }
+        const callback = function() {
+          console.info(this)
+        }
 
-      ajax.ajaxRequest({
-          data: this.state,
-          type: 'POST',
-          url: withPrefix('/contact.php'),
-          success: function(data) {
-            console.info(data)
+        ajax.ajaxRequest(
+          {
+            data: this.state,
+            type: 'POST',
+            // url: withPrefix('/contact.php'),
+            success: function(data) {
+              console.info(data)
+            },
+            error: function(xhr, status, err) {
+              console.error(status, err.toString())
+            }
           },
-          error: function(xhr, status, err) {
-            console.error(status, err.toString())
-          }
-        }, callback)
+          callback
+        )
 
-      console.log(this.state)
+        console.log(this.state)
 
-      this.setState({
-        formEmail: '',
-        formMessage: '',
-        formName: '',
-        formNewsletter: false,
-        isFormSubmitted: true,
-        isFormValid: false
-      })
+        this.setState({
+          formEmail: '',
+          formMessage: '',
+          formName: '',
+          formNewsletter: false,
+          isFormSubmitted: true,
+          isFormValid: false
+        })
+      }, 1000)
     }
   }
 
