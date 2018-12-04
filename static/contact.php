@@ -25,12 +25,12 @@
       $recipient = "$myEmail";
 
       // Set the email subject.
-      $subject = "Contact via DEVERO Studio from $name";
+      $subject = "Contact via Alex Devero from $name";
 
       // Build the email content.
       $email_content = "Name: $name\n";
       $email_content .= "Email: $email\n\n";
-      $email_content .= "Subject: Contact via DEVERO Studio\n\n";
+      $email_content .= "Subject: Contact via Alex Devero\n\n";
       $email_content .= "Message:\n$message\n\n";
       $email_content .= "Want newsletter: $checkboxNewsletter\n\n";
 
