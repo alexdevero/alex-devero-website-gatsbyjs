@@ -69,7 +69,7 @@ class ContactPage extends React.Component {
           {
             data: this.state,
             type: 'POST',
-            // url: withPrefix('/contact.php'),
+            url: withPrefix('/contact.php'),
             success: function(data) {
               console.info(data)
             },
