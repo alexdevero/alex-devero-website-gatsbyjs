@@ -11,10 +11,10 @@
       $name = str_replace(array("\r","\n"),array(" "," "),$name);
       $email = filter_var(trim($_POST["formEmail"]), FILTER_SANITIZE_EMAIL);
       $message = trim($_POST["formMessage"]);
-      $checkboxNewsletter = isset($_POST["formNewsletter"]);
+      $checkboxNewsletter = trim($_POST["formNewsletter"]);
 
       // Check that data was sent to the mailer.
-      if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+     if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Set a 400 (bad request) response code and exit.
         //http_response_code(400);
         echo "Oops! There was a problem with your submission. Please complete the form and try again.";
@@ -23,6 +23,10 @@
 
       // Set the recipient email address.
       $recipient = "$myEmail";
+
+      // Print content of the state ($_POST array)
+      // Don't use this on production!
+      // $content = print_r($_POST);
 
       // Set the email subject.
       $subject = "Contact via Alex Devero from $name";

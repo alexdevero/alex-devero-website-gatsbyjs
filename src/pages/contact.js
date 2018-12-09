@@ -1,5 +1,5 @@
 import React from 'react'
-import ajax from 'ajax-query'
+import $ from 'jquery'
 import { withPrefix } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -43,42 +43,23 @@ class ContactPage extends React.Component {
   handleFormSubmit = event => {
     event.preventDefault()
 
-    if (this.state.formEmail.length > 0 && this.state.formName.length > 0) {
+    if (this.state.formEmail.length > 0 && this.state.formName.length > 0 && this.state.formMessage.length > 0 ) {
       this.setState({
         isFormValid: true
       })
 
       setTimeout(() => {
-        // $.ajax({
-        //   data: this.state,
-        //   type: 'POST',
-        //   url: withPrefix('/contact.php'),
-        //   success: function(data) {
-        //     console.info(data)
-        //   },
-        //   error: function(xhr, status, err) {
-        //     console.error(status, err.toString())
-        //   }
-        // })
-
-        const callback = function() {
-          console.info(this)
-        }
-
-        ajax.ajaxRequest(
-          {
-            data: this.state,
-            type: 'POST',
-            url: withPrefix('/contact.php'),
-            success: function(data) {
-              console.info(data)
-            },
-            error: function(xhr, status, err) {
-              console.error(status, err.toString())
-            }
+        $.ajax({
+          data: this.state,
+          type: 'POST',
+          url: withPrefix('/contact.php'),
+          success: function(data) {
+            console.info(data)
           },
-          callback
-        )
+          error: function(xhr, status, err) {
+            console.error(status, err.toString())
+          }
+        })
 
         console.log(this.state)
 
@@ -128,7 +109,7 @@ class ContactPage extends React.Component {
                 <fieldset>
                   <label>Your message</label>
 
-                  <textarea onChange={this.handleInputChange} name="formMessage" id="formMessage" />
+                  <textarea onChange={this.handleInputChange} name="formMessage" id="formMessage" required={true} />
                 </fieldset>
 
                 <fieldset>
