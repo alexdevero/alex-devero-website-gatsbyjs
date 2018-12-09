@@ -21,7 +21,7 @@ const Header = () => (
           <Link to="/about/">About</Link>
         </li>
 
-        <li style={{ display: 'none' }}>
+        <li>
           <Link to="/contact/">Contact</Link>
         </li>
       </ul>
