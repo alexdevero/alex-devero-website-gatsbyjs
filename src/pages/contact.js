@@ -10,6 +10,7 @@ class ContactPage extends React.Component {
     formMessage: '',
     formName: '',
     formNewsletter: false,
+    isErrorShown: false,
     isFormSubmitted: false,
     isFormValid: false
   }
@@ -68,10 +69,15 @@ class ContactPage extends React.Component {
           formMessage: '',
           formName: '',
           formNewsletter: false,
+          isErrorShown: false,
           isFormSubmitted: true,
           isFormValid: false
         })
       }, 1000)
+    } else {
+      this.setState({
+        isErrorShown: true
+      })
     }
   }
 
@@ -123,6 +129,12 @@ class ContactPage extends React.Component {
                 {this.state.isFormSubmitted && (
                   <fieldset>
                     <p>Your message is on the way. I will reply in three days.</p>
+                  </fieldset>
+                )}
+
+                {this.state.isErrorShown && (
+                  <fieldset>
+                    <p>Please, make sure to fill all fields.</p>
                   </fieldset>
                 )}
 
