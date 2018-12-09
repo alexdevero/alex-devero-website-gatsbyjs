@@ -46,6 +46,7 @@ class ContactPage extends React.Component {
 
     if (this.state.formEmail.length > 0 && this.state.formName.length > 0 && this.state.formMessage.length > 0 ) {
       this.setState({
+        isErrorShown: false,
         isFormValid: true
       })
 
