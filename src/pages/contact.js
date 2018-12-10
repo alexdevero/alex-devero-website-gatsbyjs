@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { withPrefix } from 'gatsby'
 import $ from 'jquery'
 import Recaptcha from 'react-recaptcha'
@@ -100,80 +101,87 @@ class ContactPage extends React.Component {
 
   render() {
     return (
-      <Layout>
-        <div className="hero">
-          <h1>Let's get in touch</h1>
-        </div>
+      <React.Fragment>
+        <Helmet>
+          {/* <!-- reCaptcha API --> */}
+          <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+        </Helmet>
 
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <p>Do you have some project you want to realize? Please, contact me via the form below. I will reply in 3 days. {/*You can also <a href="#">click here</a> to reveal QR code and scan it. It contains my contact information.*/}</p>
+        <Layout>
+          <div className="hero">
+            <h1>Let's get in touch</h1>
+          </div>
 
-              <form action="">
-                <div className="row">
-                  <div className="col-md-6">
-                    <fieldset>
-                      <label htmlFor="formName">Full name</label>
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-lg-8">
+                <p>Do you have some project you want to realize? Please, contact me via the form below. I will reply in 3 days. {/*You can also <a href="#">click here</a> to reveal QR code and scan it. It contains my contact information.*/}</p>
 
-                      <input onChange={this.handleInputChange} type="text" name="formName" id="formName" required={true} />
-                    </fieldset>
+                <form action="">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <fieldset>
+                        <label htmlFor="formName">Full name</label>
+
+                        <input onChange={this.handleInputChange} type="text" name="formName" id="formName" required={true} />
+                      </fieldset>
+                    </div>
+
+                    <div className="col-md-6">
+                      <fieldset>
+                        <label htmlFor="formEmail">Email address</label>
+
+                        <input onChange={this.handleInputChange} type="email" name="formEmail" id="formEmail" required={true} />
+                      </fieldset>
+                    </div>
                   </div>
 
-                  <div className="col-md-6">
+                  <fieldset>
+                    <label>Your message</label>
+
+                    <textarea onChange={this.handleInputChange} name="formMessage" id="formMessage" required={true} />
+                  </fieldset>
+
+                  <fieldset>
+                    <label htmlFor="formNewsletter">
+                      <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="formNewsletter" id="formNewsletter" defaultChecked={false} />
+
+                      <span>Yes, I want to be informed about new tech, design & business articles.</span>
+                    </label>
+                  </fieldset>
+
+                  <fieldset>
+                    <Recaptcha
+                      onloadCallback={this.onCaptchaLoad}
+                      sitekey="6Ldt6RgUAAAAAKtaxY2787y3S7uP5Wp9kzL0PMMg"
+                      render="explicit"
+                      verifyCallback={this.onCaptchaVerify}
+                    />
+                  </fieldset>
+
+                  {this.state.isFormSubmitted && (
                     <fieldset>
-                      <label htmlFor="formEmail">Email address</label>
-
-                      <input onChange={this.handleInputChange} type="email" name="formEmail" id="formEmail" required={true} />
+                      <p>Your message is on the way. I will reply in three days.</p>
                     </fieldset>
-                  </div>
-                </div>
+                  )}
 
-                <fieldset>
-                  <label>Your message</label>
+                  {this.state.isErrorShown && (
+                    <fieldset>
+                      <p>Please, make sure to fill all fields.</p>
+                    </fieldset>
+                  )}
 
-                  <textarea onChange={this.handleInputChange} name="formMessage" id="formMessage" required={true} />
-                </fieldset>
-
-                <fieldset>
-                  <label htmlFor="formNewsletter">
-                    <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="formNewsletter" id="formNewsletter" defaultChecked={false} />
-
-                    <span>Yes, I want to be informed about new tech, design & business articles.</span>
-                  </label>
-                </fieldset>
-
-                <fieldset>
-                  <Recaptcha
-                    onloadCallback={this.onCaptchaLoad}
-                    sitekey="6Ldt6RgUAAAAAKtaxY2787y3S7uP5Wp9kzL0PMMg"
-                    render="explicit"
-                    verifyCallback={this.onCaptchaVerify}
-                  />
-                </fieldset>
-
-                {this.state.isFormSubmitted && (
                   <fieldset>
-                    <p>Your message is on the way. I will reply in three days.</p>
+                    <button onClick={this.handleFormSubmit} className="btn">
+                      Send
+                    </button>
                   </fieldset>
-                )}
-
-                {this.state.isErrorShown && (
-                  <fieldset>
-                    <p>Please, make sure to fill all fields.</p>
-                  </fieldset>
-                )}
-
-                <fieldset>
-                  <button onClick={this.handleFormSubmit} className="btn">
-                    Send
-                  </button>
-                </fieldset>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </Layout>
+        </Layout>
+      </React.Fragment>
     )
   }
 }
