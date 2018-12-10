@@ -1,6 +1,7 @@
 import React from 'react'
-import $ from 'jquery'
 import { withPrefix } from 'gatsby'
+import $ from 'jquery'
+import Recaptcha from 'react-recaptcha'
 
 import Layout from '../components/layout'
 
@@ -10,6 +11,7 @@ class ContactPage extends React.Component {
     formMessage: '',
     formName: '',
     formNewsletter: false,
+    isCaptchaValid: false,
     isErrorShown: false,
     isFormSubmitted: false,
     isFormValid: false
@@ -41,10 +43,22 @@ class ContactPage extends React.Component {
     })
   }
 
+  // Show message in console when reCaptcha plugin is loaded
+  onCaptchaLoad = () => {
+    console.log('Captcha loaded')
+  }
+
+  // Update state after reCaptcha validates visitor
+  onCaptchaVerify = (response) => {
+    this.setState({
+      isCaptchaValid: true
+    })
+  }
+
   handleFormSubmit = event => {
     event.preventDefault()
 
-    if (this.state.formEmail.length > 0 && this.state.formName.length > 0 && this.state.formMessage.length > 0 ) {
+    if (this.state.formEmail.length > 0 && this.state.formName.length > 0 && this.state.formMessage.length > 0 && this.state.isCaptchaValid) {
       this.setState({
         isErrorShown: false,
         isFormValid: true
@@ -65,11 +79,13 @@ class ContactPage extends React.Component {
 
         console.log(this.state)
 
+        // Reset state after sending the form
         this.setState({
           formEmail: '',
           formMessage: '',
           formName: '',
           formNewsletter: false,
+          isCaptchaValid: false,
           isErrorShown: false,
           isFormSubmitted: true,
           isFormValid: false
@@ -125,6 +141,15 @@ class ContactPage extends React.Component {
 
                     <span>Yes, I want to be informed about new tech, design & business articles.</span>
                   </label>
+                </fieldset>
+
+                <fieldset>
+                  <Recaptcha
+                    onloadCallback={this.onCaptchaLoad}
+                    sitekey="6Ldt6RgUAAAAAKtaxY2787y3S7uP5Wp9kzL0PMMg"
+                    render="explicit"
+                    verifyCallback={this.onCaptchaVerify}
+                  />
                 </fieldset>
 
                 {this.state.isFormSubmitted && (
