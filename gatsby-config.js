@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Alex Devero'
+    title: 'Alex Devero',
+    description: 'I am Alex Devero, founder/CEO of DEVERO Corporation. An entrepreneur, self-taught designer & developer from Czech Republic. My goal is to use technology to make an impact on the World and humankind, and change both in the process.',
+    author: '@alexdevero'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
