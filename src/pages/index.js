@@ -1,9 +1,12 @@
 import React from 'react'
 
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const IndexPage = () => (
   <Layout page="home">
+    <SEO title="Home" keywords={['design', 'web design', 'entrepreneur', 'founder', 'ceo']} />
+
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-lg-8">

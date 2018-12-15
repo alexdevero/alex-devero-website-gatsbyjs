@@ -5,6 +5,7 @@ import $ from 'jquery'
 import Recaptcha from 'react-recaptcha'
 
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 class ContactPage extends React.Component {
   state = {
@@ -108,6 +109,8 @@ class ContactPage extends React.Component {
         </Helmet>
 
         <Layout>
+          <SEO title="Contact" keywords={['contact', 'design', 'web design', 'entrepreneur', 'founder', 'ceo']} />
+
           <div className="hero">
             <h1>Let's get in touch</h1>
           </div>
