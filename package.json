@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Alex Devero <deveroalex@gmail.com>",
   "dependencies": {
-    "cssnano": "4.1.7",
+    "cssnano": "4.1.8",
     "gatsby": "2.0.64",
     "gatsby-image": "2.0.22",
     "gatsby-plugin-manifest": "2.0.11",
@@ -19,11 +19,11 @@
     "postcss-extend": "1.0.5",
     "postcss-import": "12.0.1",
     "postcss-nesting": "7.0.0",
-    "postcss-preset-env": "6.4.0",
+    "postcss-preset-env": "6.5.0",
     "postcss-pxtorem": "4.0.1",
     "postcss-responsive-type": "^1.0.0",
-    "react": "16.6.3",
-    "react-dom": "16.6.3",
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
     "react-helmet": "5.2.0",
     "react-recaptcha": "^2.3.10"
   },
