@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Alex Devero <deveroalex@gmail.com>",
   "dependencies": {
-    "cssnano": "4.1.8",
+    "cssnano": "4.1.10",
     "gatsby": "2.0.91",
     "gatsby-image": "2.0.26",
     "gatsby-plugin-manifest": "2.0.13",
@@ -19,11 +19,11 @@
     "postcss-extend": "1.0.5",
     "postcss-import": "12.0.1",
     "postcss-nesting": "7.0.0",
-    "postcss-preset-env": "6.5.0",
+    "postcss-preset-env": "6.6.0",
     "postcss-pxtorem": "4.0.1",
     "postcss-responsive-type": "^1.0.0",
-    "react": "16.7.0",
-    "react-dom": "16.7.0",
+    "react": "16.8.5",
+    "react-dom": "16.8.5",
     "react-helmet": "5.2.0",
     "react-recaptcha": "^2.3.10"
   },
@@ -37,7 +37,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.16.0"
+    "prettier": "^1.16.4"
   },
   "repository": {
     "type": "git",
