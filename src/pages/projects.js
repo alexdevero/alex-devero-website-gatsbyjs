@@ -24,7 +24,7 @@ const ProjectsPage = () => (
 
       <div className="projects__dashboard row">
         <div className="col-md-6 col-lg-4">
-          <a className="project__container" href="#">
+          <button className="project__container" href="#">
             <div className="project__header">
               <img className="project__thumbnail" src="" alt="" />
             </div>
@@ -36,11 +36,11 @@ const ProjectsPage = () => (
 
               <h2 className="project__heading h5">Project heading</h2>
             </div>
-          </a>
+          </button>
         </div>
 
         <div className="col-md-6 col-lg-4">
-          <a className="project__container" href="#">
+          <button className="project__container" href="#">
             <div className="project__header">
               <img className="project__thumbnail" src="" alt="" />
             </div>
@@ -52,11 +52,11 @@ const ProjectsPage = () => (
 
               <h2 className="project__heading h5">Project heading</h2>
             </div>
-          </a>
+          </button>
         </div>
 
         <div className="col-md-6 col-lg-4">
-          <a className="project__container" href="#">
+          <button className="project__container" href="#">
             <div className="project__header">
               <img className="project__thumbnail" src="" alt="" />
             </div>
@@ -68,11 +68,11 @@ const ProjectsPage = () => (
 
               <h2 className="project__heading h5">Project heading</h2>
             </div>
-          </a>
+          </button>
         </div>
 
         <div className="col-md-6 col-lg-4">
-          <a className="project__container" href="#">
+          <button className="project__container" href="#">
             <div className="project__header">
               <img className="project__thumbnail" src="" alt="" />
             </div>
@@ -84,11 +84,11 @@ const ProjectsPage = () => (
 
               <h2 className="project__heading h5">Project heading</h2>
             </div>
-          </a>
+          </button>
         </div>
 
         <div className="col-md-6 col-lg-4">
-          <a className="project__container" href="#">
+          <button className="project__container" href="#">
             <div className="project__header">
               <img className="project__thumbnail" src="" alt="" />
             </div>
@@ -100,11 +100,11 @@ const ProjectsPage = () => (
 
               <h2 className="project__heading h5">Project heading</h2>
             </div>
-          </a>
+          </button>
         </div>
 
         <div className="col-md-6 col-lg-4">
-          <a className="project__container" href="#">
+          <button className="project__container" href="#">
             <div className="project__header">
               <img className="project__thumbnail" src="" alt="" />
             </div>
@@ -116,11 +116,11 @@ const ProjectsPage = () => (
 
               <h2 className="project__heading h5">Project heading</h2>
             </div>
-          </a>
+          </button>
         </div>
 
         <div className="col-md-6 col-lg-4">
-          <a className="project__container" href="#">
+          <button className="project__container" href="#">
             <div className="project__header">
               <img className="project__thumbnail" src="" alt="" />
             </div>
@@ -132,11 +132,11 @@ const ProjectsPage = () => (
 
               <h2 className="project__heading h5">Project heading</h2>
             </div>
-          </a>
+          </button>
         </div>
 
         <div className="col-md-6 col-lg-4">
-          <a className="project__container" href="#">
+          <button className="project__container" href="#">
             <div className="project__header">
               <img className="project__thumbnail" src="" alt="" />
             </div>
@@ -148,11 +148,11 @@ const ProjectsPage = () => (
 
               <h2 className="project__heading h5">Project heading</h2>
             </div>
-          </a>
+          </button>
         </div>
 
         <div className="col-md-6 col-lg-4">
-          <a className="project__container" href="#">
+          <button className="project__container" href="#">
             <div className="project__header">
               <img className="project__thumbnail" src="" alt="" />
             </div>
@@ -164,7 +164,7 @@ const ProjectsPage = () => (
 
               <h2 className="project__heading h5">Project heading</h2>
             </div>
-          </a>
+          </button>
         </div>
       </div>
     </div>
