@@ -27,6 +27,9 @@
     "react-helmet": "5.2.0",
     "react-recaptcha": "^2.3.10"
   },
+  "resolutions": {
+    "sharp": "0.22.1"
+  },
   "keywords": [],
   "license": "MIT",
   "scripts": {
