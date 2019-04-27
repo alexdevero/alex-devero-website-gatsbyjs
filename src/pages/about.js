@@ -14,7 +14,7 @@ const AboutPage = () => (
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-lg-8">
-          <p>I am founder/CEO of DEVERO Corporation. Entrepreneur, innovator, hacker, tinkerer, developer, programmer, designer, philosopher, blogger, poly(math | glot) and heretic from Czech Republic. I am obsessed with all things startups, business, technology, design and beyond. Beside working on <a href="https://devero.io" target="_blank">DEVERO Corporation</a>, I write extensively on <a className="link--red link--underline" href="https://blog.alexdevero.com/">my blog</a>.</p>
+          <p>I am founder/CEO of DEVERO Corporation. Entrepreneur, innovator, hacker, tinkerer, developer, programmer, designer, philosopher, blogger, poly(math | glot) and heretic from Czech Republic. I am obsessed with all things startups, business, technology, design and beyond. Beside working on <a href="https://devero.io" target="_blank" rel="noopener noreferrer">DEVERO Corporation</a>, I write extensively on <a className="link--red link--underline" href="https://blog.alexdevero.com/" target="_blank" rel="noopener noreferrer">my blog</a>.</p>
 
           <p>My goal is to create the biggest company in the history and use technology to change the World and humankind.</p>
         </div>
