@@ -15,15 +15,15 @@
     "gatsby-plugin-typescript": "^2.0.11",
     "gatsby-source-filesystem": "2.0.32",
     "gatsby-transformer-sharp": "2.1.18",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.0",
     "postcss-extend": "1.0.5",
     "postcss-import": "12.0.1",
     "postcss-nesting": "7.0.0",
     "postcss-preset-env": "6.6.0",
     "postcss-pxtorem": "4.0.1",
     "postcss-responsive-type": "^1.0.0",
-    "react": "16.8.5",
-    "react-dom": "16.8.5",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
     "react-helmet": "5.2.0",
     "react-recaptcha": "^2.3.10"
   },
@@ -40,7 +40,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.16.4"
+    "prettier": "^1.17.0"
   },
   "repository": {
     "type": "git",
