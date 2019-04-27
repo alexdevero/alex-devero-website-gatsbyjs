@@ -16,11 +16,11 @@ const Footer = () => (
           </a>
         </li>
 
-        {/*<li>
+        <li>
           <a href="https://www.facebook.com/deveroalex" rel="noopener noreferrer" target="_blank">
             <span className="fab fa-facebook" />
           </a>
-        </li>*/}
+        </li>
 
         <li>
           <a href="https://github.com/alexdevero" rel="noopener noreferrer" target="_blank">
@@ -46,11 +46,11 @@ const Footer = () => (
           </a>
         </li>*/}
 
-        <li>
+        {/* <li>
           <a href="https://stackoverflow.com/story/alexdevero" rel="noopener noreferrer" target="_blank">
             <span className="fab fa-stack-overflow" />
           </a>
-        </li>
+        </li> */}
       </ul>
     </nav>
 
