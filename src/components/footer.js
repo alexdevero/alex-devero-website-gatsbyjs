@@ -11,20 +11,20 @@ const Footer = () => (
         </li>
 
         <li>
-          <a href="https://cz.linkedin.com/in/alexdevero" rel="noopener noreferrer" target="_blank">
-            <span className="fab fa-linkedin" />
-          </a>
-        </li>
-
-        <li>
           <a href="https://www.facebook.com/deveroalex" rel="noopener noreferrer" target="_blank">
             <span className="fab fa-facebook" />
           </a>
         </li>
 
         <li>
-          <a href="https://github.com/alexdevero" rel="noopener noreferrer" target="_blank">
-            <span className="fab fa-github" />
+          <a href="https://instagram.com/alexdevero" rel="noopener noreferrer" target="_blank">
+            <span className="fab fa-instagram" />
+          </a>
+        </li>
+
+        <li>
+          <a href="https://cz.linkedin.com/in/alexdevero" rel="noopener noreferrer" target="_blank">
+            <span className="fab fa-linkedin" />
           </a>
         </li>
 
@@ -35,7 +35,13 @@ const Footer = () => (
         </li>
 
         <li>
-          <a href="https://codepen.io/alexdevero/" rel="noopener noreferrer" target="_blank">
+          <a href="https://github.com/alexdevero" rel="noopener noreferrer" target="_blank">
+            <span className="fab fa-github" />
+          </a>
+        </li>
+
+        <li>
+          <a href="https://codepen.io/alexdevero" rel="noopener noreferrer" target="_blank">
             <span className="fab fa-codepen" />
           </a>
         </li>
