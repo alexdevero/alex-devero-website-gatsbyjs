@@ -7,7 +7,7 @@
     "cssnano": "4.1.10",
     "gatsby": "2.3.31",
     "gatsby-image": "2.0.40",
-    "gatsby-plugin-google-analytics": "^2.0.19",
+    "gatsby-plugin-google-gtag": "^1.0.17",
     "gatsby-plugin-manifest": "2.0.29",
     "gatsby-plugin-offline": "2.0.25",
     "gatsby-plugin-postcss": "2.0.7",
@@ -36,6 +36,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "preview": "npm run build && npm run serve",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
