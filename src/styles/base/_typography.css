@@ -84,7 +84,7 @@ p {
   & a {
     text-decoration-color: var(--color-brand);
     color: #111;
-    transition: all var(--tran-timing) var(--tran-duration);
+    transition: var(--tr-all);
 
     &:hover {
       color: #111;

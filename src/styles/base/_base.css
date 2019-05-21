@@ -7,8 +7,10 @@ html {
   --color-brand: hsl(351.6, 97.2%, 42%); /* #d30320 */
   --color-black: #000;
 
-  --tran-timing: .25s;
-  --tran-duration: ease-in-out;
+  --tr-timing: .25s;
+  --tr-duration: ease-in-out;
+  --tr-full: all var(--tr-timing) var(--tr-duration);
+  --tr-part: var(--tr-timing) var(--tr-duration);
 }
 
 ul,
