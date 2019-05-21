@@ -1,5 +1,8 @@
 /* Footer */
 .footer {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   & a {
     font-size: 24px;
   }
@@ -7,6 +10,6 @@
   & small {
     display: block;
     margin-top: 16px;
-    color: rgba(119, 133, 149, 0.5);
+    color: rgba(119, 133, 149, .5);
   }
 }
