@@ -5,9 +5,11 @@ const Header = () => {
   const [isMobileMenuVisible, toggleMobileMenu] = React.useState(false)
 
   const generateNavClass = () => {
-    if (window.innerWidth <= 767.99 && isMobileMenuVisible) {
+    const windowGlobal = typeof window !== 'undefined' && window
+
+    if (windowGlobal.innerWidth <= 767.99 && isMobileMenuVisible) {
       return 'nav-main--visible'
-    } else if (window.innerWidth <= 767.99 && !isMobileMenuVisible) {
+    } else if (windowGlobal.innerWidth <= 767.99 && !isMobileMenuVisible) {
       return 'nav-main--hidden'
     } else {
       return null
