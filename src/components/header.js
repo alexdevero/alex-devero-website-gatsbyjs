@@ -14,11 +14,19 @@ const Header = () => (
         </li>
 
         <li>
-          <a href="https://blog.alexdevero.com/">Blog</a>
+          <Link to="/about/">About</Link>
         </li>
 
         <li>
-          <Link to="/about/">About</Link>
+          <a href="https://blog.alexdevero.com/" rel="noopener noreferrer" target="_blank">Blog</a>
+        </li>
+
+        <li>
+          <a href="https://devero.io/" rel="noopener noreferrer" target="_blank">Devero</a>
+        </li>
+
+        <li>
+          <a href="https://studio.devero.io/" rel="noopener noreferrer" target="_blank">Studio</a>
         </li>
 
         <li>
