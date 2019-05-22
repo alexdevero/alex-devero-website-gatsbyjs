@@ -4,16 +4,8 @@
   text-align: center;
 
   & ul {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     list-style-type: none;
-  }
-
-  & li + li {
-    margin-left: 21px;
   }
 
   & a {
