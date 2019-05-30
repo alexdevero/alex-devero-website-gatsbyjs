@@ -92,3 +92,14 @@ p {
     }
   }
 }
+
+.link--red {
+  text-decoration-color: var(--color-brand);
+  color: #111;
+  transition: var(--tr-all);
+
+  &:hover {
+    color: #111;
+    text-decoration-color: #111;
+  }
+}
