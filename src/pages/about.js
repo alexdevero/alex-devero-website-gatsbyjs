@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import axios from 'axios'
 import { xml2js } from 'xml-js'
 
@@ -18,7 +18,7 @@ class AboutPage extends React.Component {
     const responseConverted = await xml2js(response, {compact: true, spaces: 2})
     const userShelvesArray = await responseConverted.GoodreadsResponse.user.user_shelves.user_shelf
 
-    const userShelvesProcessed = await Promise.all(userShelvesArray.map((shelf) => {
+    await Promise.all(userShelvesArray.map((shelf) => {
       return {shelfName: shelf.name._text.charAt(0).toUpperCase() + shelf.name._text.slice(1), shelfId: shelf.id._text, shelfBookCount: shelf.book_count._text}
     })).then((data) => {
       this.setState({
