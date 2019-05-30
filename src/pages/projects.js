@@ -41,7 +41,7 @@ class ProjectsPage extends React.Component {
           'id': repositoryId,
           'isFork': repositoryIsFork,
           'language': repositoryLanguage,
-          'ulr': repositoryURL
+          'url': repositoryURL
         }
       })).then((data) => {
         this.setState({
@@ -88,7 +88,7 @@ class ProjectsPage extends React.Component {
 
           {this.state.areGithubDataReady && <ul className="projects__github-list list--unstyled mt-1">
             {this.state.githubData !== null && this.state.githubData.map((repository, index) => {
-              return <li key={repository.id}>No.{index < 10 ? `0${index}` : index}: <a className="link--red" href={`https://www.goodreads.com/review/list/17435617?shelf=${repository.name}`} rel="noopener noreferrer" target="_blank">{repository.name} {repository.language !== null && `(${repository.language})`}</a></li>
+              return <li key={repository.id}>No.{index < 10 ? `0${index}` : index}: <a className="link--red" href={repository.url} rel="noopener noreferrer" target="_blank">{repository.name} {repository.language !== null && `(${repository.language})`}</a></li>
             })}
           </ul>}
 
