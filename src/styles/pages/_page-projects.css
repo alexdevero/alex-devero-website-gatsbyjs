@@ -3,6 +3,17 @@
   text-align: center;
 }
 
+.projects__github-list {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 21px;
+
+  & li {
+    width: 50%;
+    text-align: left;
+  }
+}
+
 .projects__dashboard {
   padding-top: 64px;
   padding-bottom: 64px;
