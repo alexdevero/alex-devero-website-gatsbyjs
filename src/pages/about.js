@@ -51,7 +51,7 @@ class AboutPage extends React.Component {
 
             {this.state.isBookListReady && <ul className="about__books-list list--unstyled mt-1">
               {this.state.goodreadsData !== null && this.state.goodreadsData.map((shelf) => {
-                return <li key={shelf.shelfId}>Bookshelf: <a className="link--red" href={`https://www.goodreads.com/review/list/17435617?shelf=${shelf.shelfName}`} rel="noopener noreferrer" target="_blank">{shelf.shelfName} ({shelf.shelfBookCount})</a></li>
+                return <li key={shelf.shelfId}>Bookshelf: <a className="link--red" href={`https://www.goodreads.com/review/list/17435617?shelf=${shelf.shelfName.toLowerCase()}`} rel="noopener noreferrer" target="_blank">{shelf.shelfName} ({shelf.shelfBookCount})</a></li>
               })}
             </ul>}
 
