@@ -29,7 +29,8 @@
     "react-dom": "16.8.6",
     "react-helmet": "5.2.1",
     "react-medium-image-zoom": "^3.0.16",
-    "react-recaptcha": "^2.3.10"
+    "react-recaptcha": "^2.3.10",
+    "xml-js": "^1.6.11"
   },
   "resolutions": {
     "sharp": "0.22.1"
