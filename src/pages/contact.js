@@ -1,8 +1,8 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+// import Helmet from 'react-helmet'
 import { withPrefix } from 'gatsby'
 import $ from 'jquery'
-import Recaptcha from 'react-recaptcha'
+// import Recaptcha from 'react-recaptcha'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -13,8 +13,10 @@ class ContactPage extends React.Component {
     formMessage: '',
     formName: '',
     formNewsletter: false,
+    formUsername: '',
     isCaptchaValid: false,
     isErrorShown: false,
+    isErrorSpamBotShown: false,
     isFormSubmitted: false,
     isFormValid: false
   }
@@ -46,21 +48,21 @@ class ContactPage extends React.Component {
   }
 
   // Show message in console when reCaptcha plugin is loaded
-  onCaptchaLoad = () => {
-    console.log('Captcha loaded')
-  }
+  // onCaptchaLoad = () => {
+  //   console.log('Captcha loaded')
+  // }
 
   // Update state after reCaptcha validates visitor
-  onCaptchaVerify = (response) => {
-    this.setState({
-      isCaptchaValid: true
-    })
-  }
+  // onCaptchaVerify = (response) => {
+  //   this.setState({
+  //     isCaptchaValid: true
+  //   })
+  // }
 
   handleFormSubmit = event => {
     event.preventDefault()
 
-    if (this.state.formEmail.length > 0 && this.state.formName.length > 0 && this.state.formMessage.length > 0 && this.state.isCaptchaValid) {
+    if (this.state.formEmail.length > 0 && this.state.formName.length > 0 && this.state.formMessage.length > 0 && this.state.formUsername.length === 0 /* this.state.isCaptchaValid */) {
       this.setState({
         isErrorShown: false,
         isFormValid: true
@@ -89,10 +91,15 @@ class ContactPage extends React.Component {
           formNewsletter: false,
           isCaptchaValid: false,
           isErrorShown: false,
+          isErrorSpamBotShown: false,
           isFormSubmitted: true,
           isFormValid: false
         })
       }, 1000)
+    } else if (this.state.formUsername.length > 0) {
+      this.setState({
+        isErrorSpamBotShown: true
+      })
     } else {
       this.setState({
         isErrorShown: true
@@ -103,10 +110,10 @@ class ContactPage extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Helmet>
-          {/* <!-- reCaptcha API --> */}
+        {/* <Helmet>
+          <!-- reCaptcha API -->
           <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-        </Helmet>
+        </Helmet> */}
 
         <Layout>
           <SEO title="Contact" keywords={['contact', 'design', 'web design', 'entrepreneur', 'founder', 'ceo']} />
@@ -139,6 +146,12 @@ class ContactPage extends React.Component {
                     </div>
                   </div>
 
+                  <fieldset className="input--username">
+                    <label htmlFor="formUsername">Username</label>
+
+                    <input onChange={this.handleInputChange} type="text" name="formUsername" id="formUsername" />
+                  </fieldset>
+
                   <fieldset>
                     <label>Your message</label>
 
@@ -153,24 +166,30 @@ class ContactPage extends React.Component {
                     </label>
                   </fieldset>
 
-                  <fieldset>
+                  {/* <fieldset>
                     <Recaptcha
                       onloadCallback={this.onCaptchaLoad}
                       sitekey="6Ldt6RgUAAAAAKtaxY2787y3S7uP5Wp9kzL0PMMg"
                       render="explicit"
                       verifyCallback={this.onCaptchaVerify}
                     />
-                  </fieldset>
+                  </fieldset> */}
 
                   {this.state.isFormSubmitted && (
                     <fieldset>
-                      <p>Your message is on the way. I will reply in three days.</p>
+                      <p><strong>Your message is on the way. I will reply in three days.</strong></p>
+                    </fieldset>
+                  )}
+
+                  {this.state.isErrorSpamBotShown && (
+                    <fieldset>
+                      <p><strong>We don't work with spammers and bots.</strong></p>
                     </fieldset>
                   )}
 
                   {this.state.isErrorShown && (
                     <fieldset>
-                      <p>Please, make sure to fill all fields.</p>
+                      <p><strong>Please, make sure to fill all fields.</strong></p>
                     </fieldset>
                   )}
 
