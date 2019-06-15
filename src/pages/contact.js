@@ -2,7 +2,7 @@ import React from 'react'
 // import Helmet from 'react-helmet'
 import { withPrefix } from 'gatsby'
 import $ from 'jquery'
-// import Recaptcha from 'react-recaptcha'
+// import Recaptcha from 'react-recaptcha''
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -81,7 +81,8 @@ class ContactPage extends React.Component {
           }
         })
 
-        console.log(this.state)
+        // Send event to Google Analytics
+        typeof window !== 'undefined' && window.gtag('event', 'contact')
 
         // Reset state after sending the form
         this.setState({
