@@ -65,52 +65,22 @@ class ProjectsPage extends React.Component {
           <h1>Projects</h1>
         </div>
 
-        <div className="projects__header container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <p>Welcome to my personal laboratory.</p>
+        <div className="projects__dashboard container">
+          <p className="mb-3 text--center">Featured examples of my design & development work:</p>
 
-              <p>These are my latest experiments you can find on my <a href="https://github.com/alexdevero">GitHub</a>:</p>
-            </div>
-          </div>
-
-          {!this.state.areGithubDataReady && <ul className="loader">
-            <li className="loader__center"></li>
-            <li className="loader__item loader__item-1"></li>
-            <li className="loader__item loader__item-2"></li>
-            <li className="loader__item loader__item-3"></li>
-            <li className="loader__item loader__item-4"></li>
-            <li className="loader__item loader__item-5"></li>
-            <li className="loader__item loader__item-6"></li>
-            <li className="loader__item loader__item-7"></li>
-            <li className="loader__item loader__item-8"></li>
-          </ul>}
-
-          {this.state.areGithubDataReady && <ul className="projects__github-list list--unstyled mt-1">
-            {this.state.githubData !== null && this.state.githubData.map((repository, index) => {
-              return <li key={repository.id}>No.{index < 10 ? `0${index}` : index}: <a className="link--red" href={repository.url} rel="noopener noreferrer" target="_blank">{repository.name} {repository.language !== null && `(${repository.language})`}</a></li>
-            })}
-          </ul>}
-
-          <div className="row justify-content-center mt-3">
-            <div className="col-lg-8">
-              <p>Are these are some examples of my design work:</p>
-            </div>
-          </div>
-
-          <div className="projects__dashboard row">
+          <div className="row">
             <div className="col-md-6 col-lg-4">
               <div className="project__container" to="#">
                 <div className="project__header">
                   <ImageZoom
                     image={{
                       src: require('./../images/thumbnails/thumbnail-tesla-web-design-concept.jpg'),
-                      alt: 'Tesla web design concept',
+                      alt: 'Tesla',
                       className: 'project__thumbnail'
                     }}
                     zoomImage={{
                       src: require('./../images/thumbnails/thumbnail-tesla-web-design-concept.jpg'),
-                      alt: 'Tesla web design concept'
+                      alt: 'Tesla'
                     }}
                   />
                 </div>
@@ -121,7 +91,7 @@ class ProjectsPage extends React.Component {
                       No.<span>1</span>
                     </span>
 
-                    <h5 className="project__heading h5">Tesla web design concept</h5>
+                    <h5 className="project__heading h5">Tesla</h5>
                   </Link>
                 </div>
               </div>
@@ -133,12 +103,12 @@ class ProjectsPage extends React.Component {
                   <ImageZoom
                     image={{
                       src: require('./../images/thumbnails/thumbnail-harley-davidson.jpg'),
-                      alt: 'Harley Davidson web design concept',
+                      alt: 'Harley-Davidson',
                       className: 'project__thumbnail'
                     }}
                     zoomImage={{
                       src: require('./../images/thumbnails/thumbnail-harley-davidson.jpg'),
-                      alt: 'Harley Davidson web design concept'
+                      alt: 'Harley-Davidson'
                     }}
                   />
                 </div>
@@ -149,7 +119,7 @@ class ProjectsPage extends React.Component {
                       No.<span>2</span>
                     </span>
 
-                    <h5 className="project__heading h5">Harley Davidson web design concept</h5>
+                    <h5 className="project__heading h5">Harley-Davidson</h5>
                   </Link>
                 </div>
               </div>
@@ -161,12 +131,12 @@ class ProjectsPage extends React.Component {
                   <ImageZoom
                     image={{
                       src: require('./../images/thumbnails/thumbnail-ceska-whisky.jpg'),
-                      alt: 'Ceska Whisky web design concept',
+                      alt: 'Česká Whisky',
                       className: 'project__thumbnail'
                     }}
                     zoomImage={{
                       src: require('./../images/thumbnails/thumbnail-ceska-whisky.jpg'),
-                      alt: 'Ceska Whisky web design concept'
+                      alt: 'Česká Whisky'
                     }}
                   />
                 </div>
@@ -177,7 +147,7 @@ class ProjectsPage extends React.Component {
                       No.<span>3</span>
                     </span>
 
-                    <h5 className="project__heading h5">Ceska Whisky web design concept</h5>
+                    <h5 className="project__heading h5">Česká Whisky</h5>
                   </Link>
                 </div>
               </div>
@@ -351,6 +321,32 @@ class ProjectsPage extends React.Component {
               </div>
             </div> */}
           </div>
+        </div>
+
+        <div className="projects__header container">
+          <div className="mt-2 mb-2 text--center">
+            {/* <p>Welcome to my personal laboratory.</p> */}
+
+            <p>My latest experiments you can find on my <a href="https://github.com/alexdevero">GitHub</a>:</p>
+          </div>
+
+          {!this.state.areGithubDataReady && <ul className="loader">
+            <li className="loader__center"></li>
+            <li className="loader__item loader__item-1"></li>
+            <li className="loader__item loader__item-2"></li>
+            <li className="loader__item loader__item-3"></li>
+            <li className="loader__item loader__item-4"></li>
+            <li className="loader__item loader__item-5"></li>
+            <li className="loader__item loader__item-6"></li>
+            <li className="loader__item loader__item-7"></li>
+            <li className="loader__item loader__item-8"></li>
+          </ul>}
+
+          {this.state.areGithubDataReady && <ul className="projects__github-list list--unstyled mt-1">
+            {this.state.githubData !== null && this.state.githubData.map((repository, index) => {
+              return <li key={repository.id}>No.{index < 10 ? `0${index}` : index}: <a className="link--red" href={repository.url} rel="noopener noreferrer" target="_blank">{repository.name} {repository.language !== null && `(${repository.language})`}</a></li>
+            })}
+          </ul>}
         </div>
       </Layout>
     )
