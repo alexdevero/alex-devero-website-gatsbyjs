@@ -74,25 +74,27 @@ class ProjectsPage extends React.Component {
                 <div className="project__header">
                   <ImageZoom
                     image={{
-                      src: require('./../images/thumbnails/thumbnail-tesla-web-design-concept.jpg'),
-                      alt: 'Tesla',
+                      src: require('./../images/thumbnails/thumbnail-supernova@1x.jpg'),
+                      alt: 'Supernova',
                       className: 'project__thumbnail'
                     }}
                     zoomImage={{
-                      src: require('./../images/thumbnails/thumbnail-tesla-web-design-concept.jpg'),
-                      alt: 'Tesla'
+                      src: require('./../images/thumbnails/thumbnail-supernova@2x.jpg'),
+                      alt: 'Supernova'
                     }}
                   />
                 </div>
 
                 <div className="project__body">
-                  <Link to="/projects/" className="project__link">
+                  <div className="project__link">
                     <span className="project__number">
                       No.<span>1</span>
                     </span>
 
-                    <h5 className="project__heading h5">Tesla</h5>
-                  </Link>
+                    <h5 className="project__heading h5">Supernova</h5>
+
+                    <a href="https://www.supernova.io" className="project__link" target="_blank" rel="noopener noreferrer"><span class="fas fa-external-link-alt" style={{ marginLeft: 6, fontSize: 16 }} /></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -102,25 +104,27 @@ class ProjectsPage extends React.Component {
                 <div className="project__header">
                   <ImageZoom
                     image={{
-                      src: require('./../images/thumbnails/thumbnail-harley-davidson.jpg'),
-                      alt: 'Harley-Davidson',
+                      src: require('./../images/thumbnails/thumbnail-fresh-tasty@1x.jpg'),
+                      alt: 'Fresh & Tasty',
                       className: 'project__thumbnail'
                     }}
                     zoomImage={{
-                      src: require('./../images/thumbnails/thumbnail-harley-davidson.jpg'),
-                      alt: 'Harley-Davidson'
+                      src: require('./../images/thumbnails/thumbnail-fresh-tasty@2x.jpg'),
+                      alt: 'Fresh & Tasty'
                     }}
                   />
                 </div>
 
                 <div className="project__body">
-                  <Link to="/projects/" className="project__link">
+                  <div className="project__link">
                     <span className="project__number">
                       No.<span>2</span>
                     </span>
 
-                    <h5 className="project__heading h5">Harley-Davidson</h5>
-                  </Link>
+                    <h5 className="project__heading h5">Fresh & Tasty</h5>
+
+                    <a href="https://www.freshandtasty.cz" className="project__link" target="_blank" rel="noopener noreferrer"><span class="fas fa-external-link-alt" style={{ marginLeft: 6, fontSize: 16 }} /></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -130,196 +134,116 @@ class ProjectsPage extends React.Component {
                 <div className="project__header">
                   <ImageZoom
                     image={{
-                      src: require('./../images/thumbnails/thumbnail-ceska-whisky.jpg'),
+                      src: require('./../images/thumbnails/thumbnail-slavnosti-ruzoveho-vina@1x.jpg'),
+                      alt: 'Slavnosti růžového vína',
+                      className: 'project__thumbnail'
+                    }}
+                    zoomImage={{
+                      src: require('./../images/thumbnails/thumbnail-slavnosti-ruzoveho-vina@2x.jpg'),
+                      alt: 'Slavnosti růžového vína'
+                    }}
+                  />
+                </div>
+
+                <div className="project__body">
+                  <div className="project__link">
+                    <span className="project__number">
+                      No.<span>3</span>
+                    </span>
+
+                    <h5 className="project__heading h5">Slavnosti růžového vína</h5>
+
+                    <a href="https://www.slavnostiruzovehovina.cz" className="project__link" target="_blank" rel="noopener noreferrer"><span class="fas fa-external-link-alt" style={{ marginLeft: 6, fontSize: 16 }} /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-6 col-lg-4">
+              <div className="project__container" to="#">
+                <div className="project__header">
+                  <ImageZoom
+                    image={{
+                      src: require('./../images/thumbnails/thumbnail-ceska-whisky@1x.jpg'),
                       alt: 'Česká Whisky',
                       className: 'project__thumbnail'
                     }}
                     zoomImage={{
-                      src: require('./../images/thumbnails/thumbnail-ceska-whisky.jpg'),
+                      src: require('./../images/thumbnails/thumbnail-ceska-whisky@2x.jpg'),
                       alt: 'Česká Whisky'
                     }}
                   />
                 </div>
 
                 <div className="project__body">
-                  <Link to="/projects/" className="project__link">
-                    <span className="project__number">
-                      No.<span>3</span>
-                    </span>
-
-                    <h5 className="project__heading h5">Česká Whisky</h5>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* <div className="col-md-6 col-lg-4">
-              <div className="project__container" to="#">
-                <div className="project__header">
-                  <ImageZoom
-                    image={{
-                      src: require('./../images/thumbnails/'),
-                      alt: '',
-                      className: 'project__thumbnail'
-                    }}
-                    zoomImage={{
-                      src: require('./../images/thumbnails/'),
-                      alt: ''
-                    }}
-                  />
-                </div>
-
-                <div className="project__body">
-                  <Link to="" className="project__link">
-                    <span className="project__number">
-                      No.<span>4</span>
-                    </span>
-
-                    <h5 className="project__heading h5">Project heading</h5>
-                  </Link>
-                </div>
-              </div>
-            </div> */}
-
-            {/* <div className="col-md-6 col-lg-4">
-              <div className="project__container" to="#">
-                <div className="project__header">
-                  <ImageZoom
-                    image={{
-                      src: require('./../images/thumbnails/'),
-                      alt: '',
-                      className: 'project__thumbnail'
-                    }}
-                    zoomImage={{
-                      src: require('./../images/thumbnails/'),
-                      alt: ''
-                    }}
-                  />
-                </div>
-
-                <div className="project__body">
-                  <Link to="" className="project__link">
-                    <span className="project__number">
-                      No.<span>5</span>
-                    </span>
-
-                    <h5 className="project__heading h5">Project heading</h5>
-                  </Link>
-                </div>
-              </div>
-            </div> */}
-
-            {/* <div className="col-md-6 col-lg-4">
-              <div className="project__container" to="#">
-                <div className="project__header">
-                  <ImageZoom
-                    image={{
-                      src: require('./../images/thumbnails/'),
-                      alt: '',
-                      className: 'project__thumbnail'
-                    }}
-                    zoomImage={{
-                      src: require('./../images/thumbnails/'),
-                      alt: ''
-                    }}
-                  />
-                </div>
-
-                <div className="project__body">
-                  <Link to="" className="project__link">
+                  <div className="project__link">
                     <span className="project__number">
                       No.<span>6</span>
                     </span>
 
-                    <h5 className="project__heading h5">Project heading</h5>
-                  </Link>
+                    <h5 className="project__heading h5">Česká Whisky</h5>
+
+                    <a href="https://www.ceskawhisky.cz" className="project__link" target="_blank" rel="noopener noreferrer"><span class="fas fa-external-link-alt" style={{ marginLeft: 6, fontSize: 16 }} /></a>
+                  </div>
                 </div>
               </div>
-            </div> */}
+            </div>
 
-            {/* <div className="col-md-6 col-lg-4">
+            <div className="col-md-6 col-lg-4">
               <div className="project__container" to="#">
                 <div className="project__header">
                   <ImageZoom
                     image={{
-                      src: require('./../images/thumbnails/'),
-                      alt: '',
+                      src: require('./../images/thumbnails/thumbnail-tesla@1x.jpg'),
+                      alt: 'Tesla Motors',
                       className: 'project__thumbnail'
                     }}
                     zoomImage={{
-                      src: require('./../images/thumbnails/'),
-                      alt: ''
+                      src: require('./../images/thumbnails/thumbnail-tesla@2x.jpg'),
+                      alt: 'Tesla Motors'
                     }}
                   />
                 </div>
 
                 <div className="project__body">
-                  <Link to="" className="project__link">
+                  <div className="project__link">
                     <span className="project__number">
-                      No.<span>7</span>
+                      No.<span>4</span>
                     </span>
 
-                    <h5 className="project__heading h5">Project heading</h5>
-                  </Link>
+                    <h5 className="project__heading h5">Tesla Motors</h5>
+                  </div>
                 </div>
               </div>
-            </div> */}
+            </div>
 
-            {/* <div className="col-md-6 col-lg-4">
+            <div className="col-md-6 col-lg-4">
               <div className="project__container" to="#">
                 <div className="project__header">
                   <ImageZoom
                     image={{
-                      src: require('./../images/thumbnails/'),
-                      alt: '',
+                      src: require('./../images/thumbnails/thumbnail-harley-davidson@1x.jpg'),
+                      alt: 'Harley-Davidson',
                       className: 'project__thumbnail'
                     }}
                     zoomImage={{
-                      src: require('./../images/thumbnails/'),
-                      alt: ''
+                      src: require('./../images/thumbnails/thumbnail-harley-davidson@2x.jpg'),
+                      alt: 'Harley-Davidson'
                     }}
                   />
                 </div>
 
                 <div className="project__body">
-                  <Link to="" className="project__link">
+                  <div className="project__link">
                     <span className="project__number">
-                      No.<span>8</span>
+                      No.<span>5</span>
                     </span>
 
-                    <h5 className="project__heading h5">Project heading</h5>
-                  </Link>
+                    <h5 className="project__heading h5">Harley-Davidson</h5>
+                  </div>
                 </div>
               </div>
-            </div> */}
-
-            {/* <div className="col-md-6 col-lg-4">
-              <div className="project__container" to="#">
-                <div className="project__header">
-                  <ImageZoom
-                    image={{
-                      src: require('./../images/thumbnails/'),
-                      alt: '',
-                      className: 'project__thumbnail'
-                    }}
-                    zoomImage={{
-                      src: require('./../images/thumbnails/'),
-                      alt: ''
-                    }}
-                  />
-                </div>
-
-                <div className="project__body">
-                  <Link to="" className="project__link">
-                    <span className="project__number">
-                      No.<span>9</span>
-                    </span>
-
-                    <h5 className="project__heading h5">Project heading</h5>
-                  </Link>
-                </div>
-              </div>
-            </div> */}
+            </div>
           </div>
         </div>
 
