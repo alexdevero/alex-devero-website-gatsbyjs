@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { xml2js } from 'xml-js'
 
-import { goodreadsCredentials } from './../_credentials/credentials.goodreads'
+import { goodreadsCredentials } from '../_credentials/credentials.goodreads'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'

@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import GitHub from 'github-api'
 import ImageZoom from 'react-medium-image-zoom'
 
-import { githubCredentials } from './../_credentials/credentials.github.js'
+import { githubCredentials } from '../_credentials/credentials.github.js'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
