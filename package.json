@@ -3,9 +3,6 @@
   "description": "Code for my website built with Gatsby default starter (inspired by equinsuocha.io).",
   "version": "1.0.0",
   "author": "Alex Devero <deveroalex@gmail.com>",
-  "resolutions": {
-    "sharp": "0.22.1"
-  },
   "keywords": [],
   "license": "MIT",
   "repository": {
