@@ -53,9 +53,9 @@
     "@types/react-helmet": "6.0.0",
     "@types/react-medium-image-zoom": "^3.0.0",
     "@types/react-recaptcha": "^2.3.3",
-    "eslint": "^6.5.1",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-react": "^7.16.0"
+    "eslint": "^7.4.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-react": "^7.20.3"
   },
   "repository": {
     "type": "git",
